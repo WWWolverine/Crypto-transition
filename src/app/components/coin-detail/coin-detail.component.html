@@ -3,23 +3,25 @@
     <div class="col-md-3 details">
       <div class="img">
         <img [src]="coinData?.image?.large" alt="" />
-        <h3 class="text-center" style="font-size: 23px">{{ coinData.name }}</h3>
+        <h3 class="text-center" style="font-size: 23px">
+          {{ coinData?.name }}
+        </h3>
 
         <div class="more-details">
           <span class="title">Rank: </span
-          ><span class="value">{{ coinData.market_cap_rank }}</span
+          ><span class="value">{{ coinData?.market_cap_rank }}</span
           ><br />
           <hr />
           <span class="title">Current Price: </span
           ><span class="value">{{
-            coinData.market_data.current_price.usd
+            coinData?.market_data.current_price.usd
               | currency: currency:"symbol-narrow":"1.1-9"
           }}</span>
           <br />
           <hr />
           <span class="title">Market Cap: </span
           ><span class="value">{{
-            coinData.market_data.market_cap.usd
+            coinData?.market_data.market_cap.usd
               | currency: currency:"symbol-narrow":"1.1-9"
           }}</span>
           <hr />
